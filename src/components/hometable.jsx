@@ -24,7 +24,7 @@ function HomeTable() {
 
                         <h3>Airline: {item.flightAirline.airlineName}</h3>
 
-                        <h3>Aircraft: {item.flightAircraft}</h3>
+                        <h3>Aircraft: {item.flightAircraft.aicraftType}</h3>
 
                         <h3>Takeoff: {item.initialAirport.airportName}</h3>
 
