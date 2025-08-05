@@ -9,7 +9,9 @@ function Home() {
 
     return (
         <>
+          <Header/>
           <HomeTable/>
+          <Footer/>
         </>
     )
 }
