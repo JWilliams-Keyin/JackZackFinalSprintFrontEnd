@@ -2,7 +2,7 @@ import '../App.css';
 
 function Footer() {
     return(
-        <div className = 'footer'><p>for test</p></div>
+        <div className = 'footer'></div>
     )
 }
 

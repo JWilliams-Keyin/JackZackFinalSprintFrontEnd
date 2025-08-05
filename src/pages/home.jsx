@@ -1,9 +1,8 @@
 import '../App.css';
-import '../components/hometable';
-import '../components/header';
-import '../components/footer';
-import '../components/navbar';
 import HomeTable from '../components/hometable';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import '../components/navbar';
 
 function Home() {
 
