@@ -17,20 +17,25 @@ function HomeTable() {
     }, []);
     return(
         <div>
-            <ul>
+            <ul className = 'homeTable'>
                 {flight.map(item => (
-                    <li key = {item.id} className = 'homeTable'>
-                        <h2>Flight {item.flightNumber}</h2>
+                    <li key = {item.id}>
+                        
+                        <div className = 'homeTableHead'>
+                            <h2>Flight {item.flightNumber}</h2>
+                        </div>
 
-                        <h3>Airline: {item.flightAirline.airlineName}</h3>
+                        <div className = 'homeTableBody'>
+                            <h3>Airline: {item.flightAirline.airlineName}</h3>
 
-                        <h3>Aircraft: {item.flightAircraft.aicraftType}</h3>
+                            <h3>Aircraft: {item.flightAircraft.aicraftType}</h3>
 
-                        <h3>Takeoff: {item.initialAirport.airportName}</h3>
+                            <h3>Takeoff: {item.initialAirport.airportName}</h3>
 
-                        <h3>Landing: {item.destinationAirport.airportName}</h3>
+                            <h3>Landing: {item.destinationAirport.airportName}</h3>
 
-                        <h3>Gate: {item.destinationGate.gateNumber}</h3>
+                            <h3>Gate: {item.destinationGate.gateNumber}</h3>
+                        </div>
                     </li>
                 ))}
             </ul>
