@@ -12,7 +12,7 @@ function NavBar() {
 
             <div className='navRight'>
                 <h2>
-                    <Link className = 'links' to = 'admin'>Admin Dashboard</Link>
+                    <Link className = 'links' to = 'admin'>Admin</Link>
                 </h2>
             </div>
             
