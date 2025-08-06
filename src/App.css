@@ -49,9 +49,9 @@
 }
 
 .homeTable {
-  margin-left: 20vw;
+  display: grid;
+  place-items: center;
   list-style-type: none;
-  width: 50vw;
 }
 
 .homeTableHead {
@@ -59,19 +59,20 @@
   border: 2px solid;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  width: 50vw;
 }
 
 .homeTableBody {
   background-color: antiquewhite;
-  text-align: left;
   border-bottom: 2px solid;
   border-left: 2px solid;
   border-right: 2px solid;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 5px;
+  width: 50vw;
 }
 
 .footer {
