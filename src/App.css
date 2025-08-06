@@ -64,15 +64,16 @@
 
 .homeTableBody {
   background-color: antiquewhite;
+  text-align: left;
   border-bottom: 2px solid;
   border-left: 2px solid;
   border-right: 2px solid;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 1vw;
   margin-bottom: 20px;
   box-shadow: 5px 5px 5px;
-  width: 50vw;
+  width: 49vw;
 }
 
 .footer {
