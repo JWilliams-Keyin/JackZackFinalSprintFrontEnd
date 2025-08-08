@@ -62,64 +62,72 @@ function AdminTable() {
 
     return(
         <>
-            <form onSubmit = {handleSubmit}>
-                <h2>Create New Flight</h2>
+            <form onSubmit = {handleSubmit} className = 'adminTable'>
+                <h2 className = 'adminTableHead'>Create New Flight</h2>
 
-                <label>Enter Flight Number:</label>
-                <input value = {flightNumber} onChange = 
-                {(event) => setFlightNumber(event.target.value)}></input>
+                <div className = 'adminTableBody'>
+                    <label>Enter Flight Number:</label>
+                    <input className = 'adminTableInput' value = 
+                    {flightNumber} onChange = {(event) => 
+                    setFlightNumber(event.target.value)}></input>
 
-                <label>Aircraft:</label>
-                <select value = {aircraftId} onChange = 
-                {(event) => setAircraftId(event.target.value)}>
-                    <option value = "">Select Aircraft</option>
-                    {aircraft.map(item => 
-                    <option key = {item.id} value = {item.id}>
-                        {item.aircraftType}
-                    </option>)}
-                </select>
+                    <label>Aircraft:</label>
+                    <select className = 'adminTableInput' value = 
+                    {aircraftId} onChange = {(event) => 
+                    setAircraftId(event.target.value)}>
+                        <option value = "">Select Aircraft</option>
+                        {aircraft.map(item => 
+                        <option key = {item.id} value = {item.id}>
+                            {item.aircraftType}
+                        </option>)}
+                    </select>
 
-                <label>Initial Airport:</label>
-                <select value = {initialAirportId} onChange = 
-                {(event) => setInitialAirportId(event.target.value)}>
-                    <option value = "">Select Airport</option>
-                    {airport.map(item => 
-                    <option key = {item.id} value = {item.id}>
-                        {item.airportName}
-                    </option>)}
-                </select>
+                    <label>Initial Airport:</label>
+                    <select className = 'adminTableInput' value = 
+                    {initialAirportId} onChange = {(event) => 
+                    setInitialAirportId(event.target.value)}>
+                        <option value = "">Select Airport</option>
+                        {airport.map(item => 
+                        <option key = {item.id} value = {item.id}>
+                            {item.airportName}
+                        </option>)}
+                    </select>
 
-                <label>Destination Airport:</label>
-                <select value = {destinationAirportId} onChange = 
-                {(event) => setDestinationAirportId(event.target.value)}>
-                    <option value = "">Select Airport</option>
-                    {airport.map(item => 
-                    <option key = {item.id} value = {item.id}>
-                        {item.airportName}
-                    </option>)}
-                </select>
+                    <label>Destination Airport:</label>
+                    <select className = 'adminTableInput' value = 
+                    {destinationAirportId} onChange = {(event) => 
+                    setDestinationAirportId(event.target.value)}>
+                        <option value = "">Select Airport</option>
+                        {airport.map(item => 
+                        <option key = {item.id} value = {item.id}>
+                            {item.airportName}
+                        </option>)}
+                    </select>
 
-                <label>Destination Gate:</label>
-                <select value = {gateId} onChange =
-                {(event) => setGateId(event.target.value)}>
-                    <option value = "">Select Gate</option>
-                    {gate.map(item => 
-                    <option key = {item.id} value = {item.id}>
-                        {item.gateNumber}
-                    </option>)}
-                </select>
+                    <label>Destination Gate:</label>
+                    <select className = 'adminTableInput' value = 
+                    {gateId} onChange = {(event) => 
+                    setGateId(event.target.value)}>
+                        <option value = "">Select Gate</option>
+                        {gate.map(item => 
+                        <option key = {item.id} value = {item.id}>
+                            {item.gateNumber}
+                        </option>)}
+                    </select>
 
-                <label>Airline:</label>
-                <select value = {airlineId} onChange = 
-                {(event) => setAirlineId(event.target.value)}>
-                    <option value = "">Select Airline</option>
-                    {airline.map(item => 
-                    <option key = {item.id} value = {item.id}>
-                        {item.airlineName}
-                    </option>)}
-                </select>
+                    <label>Airline:</label>
+                    <select className = 'adminTableInput' value = 
+                    {airlineId} onChange = {(event) => 
+                    setAirlineId(event.target.value)}>
+                        <option value = "">Select Airline</option>
+                        {airline.map(item => 
+                        <option key = {item.id} value = {item.id}>
+                            {item.airlineName}
+                        </option>)}
+                    </select>
 
-                <button type = "submit">Create Flight</button>
+                    <button type = "submit" className = 'submitButton'>Create Flight</button>
+                </div>
             </form>
         </>
     )
