@@ -8,6 +8,7 @@ function AdminTable() {
     const [airline, setAirline] = useState([]);
     const [gate, setGate] = useState([]);
 
+    const [flightNumber, setFlightNumber] = useState("");
     const [aircraftId, setAircraftId] = useState("");
     const [initialAirportId, setInitialAirportId] = useState("");
     const [destinationAirportId, setDestinationAirportId] = useState("");
@@ -41,6 +42,7 @@ function AdminTable() {
 
     const handleSubmit = async (event) => {
         const newFlight = {
+            flightNumber,
             flightAircraft: {id: parseInt(aircraftId)},
             initialAirport: {id: parseInt(initialAirportId)},
             destinationAirport: {id: parseInt(destinationAirportId)},
@@ -60,8 +62,12 @@ function AdminTable() {
 
     return(
         <>
-            <form>
+            <form onSubmit = {handleSubmit}>
                 <h2>Create New Flight</h2>
+
+                <label>Enter Flight Number:</label>
+                <input value = {flightNumber} onChange = 
+                {(event) => setFlightNumber(event.target.value)}></input>
 
                 <label>Aircraft:</label>
                 <select value = {aircraftId} onChange = 
