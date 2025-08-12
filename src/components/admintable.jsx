@@ -52,10 +52,10 @@ function AdminTable() {
 
         try {
             const response = await axios
-            .post('http://localhost:8080/flight', newFlight)
+            .post('http://localhost:8080/flight', newFlight);
             alert("Flight successfully created!")
         } catch (error) {
-            console.error("error creating flight", error)
+            console.error("Error creating flight", error);
             alert("Error creating flight!")
         }
     };
